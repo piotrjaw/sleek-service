@@ -22,7 +22,8 @@ export class DealsController {
 
   @Post(':id/activate')
   activate(@Param('id') id: string, @Response() res) {
-    return this.dealsService.activate(id, res.locals.user.id);
+    this.dealsService.activate(id, res.locals.user.id);
+    res.sendStatus(200);
   }
 
   @Get('domain/:domain')
