@@ -11,24 +11,7 @@ import { TokenService } from '../token/token.service';
 
 @Injectable()
 export class UsersService {
-  private readonly users: User[] = [
-    // {
-    //   email: 'piotr.m.jaworski@gmail.com',
-    //   id: 'a',
-    // },
-    // {
-    //   email: 'piotr.m.jaworski1@gmail.com',
-    //   id: 'b',
-    // },
-    // {
-    //   email: 'piotr.m.jaworski2@gmail.com',
-    //   id: 'c',
-    // },
-    // {
-    //   email: 'piotr.m.jaworski3@gmail.com',
-    //   id: 'd',
-    // },
-  ];
+  private readonly users: User[] = [];
   private readonly logger: Logger = new Logger(UsersService.name);
 
   constructor(private readonly tokenService: TokenService) {}
